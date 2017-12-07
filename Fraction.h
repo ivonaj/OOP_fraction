@@ -18,7 +18,7 @@ public:
 	int getNum();
 	int getDen();
 
-	string toString();
+	friend string display(Fraction);
 	Fraction operator+ (Fraction);
 	Fraction operator- (Fraction);
 	Fraction operator* (Fraction);

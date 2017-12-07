@@ -25,13 +25,6 @@ int Fraction::getDen()
     return den;
 }
 
-string Fraction::toString()
-{
-    string fracString;
-    fracString= to_string(num)+"/"+ to_string(den);
-    return fracString;
-}
-
 Fraction Fraction::operator+(Fraction newFrac)
 {
     return Fraction(num*newFrac.den + newFrac.num*den,den*newFrac.den);
@@ -101,21 +94,27 @@ void Fraction::pretty(){
 
 
 }
+string display(Fraction frac)
+{
+    string fracString;
+    fracString= to_string(frac.num)+"/"+ to_string(frac.den);
+    return fracString;
+}
 
 int main() {
     int num1, den1=0;
     cin >> num1 >> den1;
     Fraction frac1(num1, den1);
-    cout<< frac1.toString()<< endl;
+    cout<< display(frac1)<< endl;
     int num2, den2=0;
     cin >> num2 >> den2;
     Fraction frac2(num2, den2);
-    cout << frac2.toString() << endl;
+    cout << display(frac2) << endl;
 
     Fraction result;
     result = frac1 * frac2;
     result.pretty();
-    cout <<result.toString()<< endl;
+    cout <<display(result)<< endl;
     bool equality=(frac1==frac2);
     cout<<equality;
 
