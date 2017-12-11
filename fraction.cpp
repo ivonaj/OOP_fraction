@@ -101,26 +101,4 @@ string display(Fraction frac)
     return fracString;
 }
 
-int main() {
-    int num1, den1=0;
-    cin >> num1 >> den1;
-    Fraction frac1(num1, den1);
-    cout<< display(frac1)<< endl;
-    int num2, den2=0;
-    cin >> num2 >> den2;
-    Fraction frac2(num2, den2);
-    cout << display(frac2) << endl;
 
-    Fraction result;
-    result = frac1 * frac2;
-    result.pretty();
-    cout <<display(result)<< endl;
-    bool equality=(frac1==frac2);
-    cout<<equality;
-
-
-    return 0;
-
-
-
-}
